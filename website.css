@@ -1,0 +1,50 @@
+
+/* 
+common paragraph styles 
+*/
+p{
+    font-family: Arial; 
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* 
+specific styles for different classes
+higher priority! 
+*/
+.website-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    background-color: rgb(53, 182, 225);
+}
+
+.span-topics {
+    color: red;
+    cursor: pointer;
+}
+
+.span-topics:hover{
+    text-decoration: underline;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 12px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(53, 182, 225);
+}
+
+.description {
+    font-size: 14px;
+    font-weight: normal;
+    width: 400px;
+    line-height: 20px;
+    margin-top: 10px;
+}
