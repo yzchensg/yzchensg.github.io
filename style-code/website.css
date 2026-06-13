@@ -1,0 +1,137 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #111;
+}
+
+.background-photo {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.background-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.22));
+}
+
+.background-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.homepage {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 72px;
+    width: min(720px, 100%);
+}
+
+.title-block {
+    margin-bottom: 36px;
+}
+
+.main-title {
+    font-size: clamp(56px, 9vw, 118px);
+    line-height: 0.95;
+    font-weight: 800;
+}
+
+.subtitle {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-left: 12px;
+    margin-top: 24px;
+    font-size: 30px;
+    line-height: 1.55;
+}
+
+.subtitle-text {
+    color: white;
+    font-weight: 400;
+}
+
+.subtitle-divider {
+    color: rgba(255, 255, 255, 0.58);
+    font-weight: 300;
+}
+
+
+.nav-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px;
+    width: fit-content;
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    border-radius: 8px;
+}
+
+.nav-button {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    border-radius: 6px;
+    transition: all 0.8s ease;
+}
+
+.nav-button:hover {
+    background: grey;
+    color: #111;
+}
+
+@media (max-width: 700px) {
+    .background-photo::after {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.84));
+    }
+
+    .homepage {
+        justify-content: flex-end;
+        padding: 32px 20px;
+    }
+
+    .main-title {
+        font-size: 52px;
+    }
+
+    .subtitle {
+        font-size: 30px;
+        gap: 10px;
+    }
+
+    .nav-block {
+        width: 100%;
+    }
+
+    .nav-button {
+        flex: 1 1 150px;
+        justify-content: center;
+    }
+}
